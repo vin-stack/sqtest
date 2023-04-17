@@ -4,6 +4,7 @@ import base64
 import pandas as pd
 from streamlit_option_menu import  option_menu
 import os
+import webbrowser
 # DB Mgm
 import sqlite3 
 from db_fxns import *
@@ -131,4 +132,7 @@ page_names_to_funcs = {
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+if st.sidebar.button("Back to portal"):
+	url="https://vin-stack-sqlex-app-zk5dw5.streamlit.app/"
+	webbrowser.open_new_tab(url)
 page_names_to_funcs[selected_page]()
