@@ -109,7 +109,7 @@ def run_query():
     query = st.text_area("SQL Query", height=100)
     conn = create_connection(db_filename)
 
-    #submitted = st.button('Run Query')
+    submitted = st.button('Run Query')
 
     if submitted:
         try:
