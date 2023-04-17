@@ -38,7 +38,7 @@ right: 2rem;
 }}
 </style>
 """
-
+st.title("SQLSpace")
 st.markdown(page_bg_img, unsafe_allow_html=True)
 # Fxn Make Execution
 def sql_executor(raw_code):
