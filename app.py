@@ -109,7 +109,7 @@ def run_query():
     query = st.text_area("SQL Query", height=100)
     conn = create_connection(db_filename)
 
-    submitted = st.button('Run Query')
+    #submitted = st.button('Run Query')
 
     if submitted:
         try:
@@ -123,12 +123,13 @@ def run_query():
         except Exception as e:
             st.write(e)
 
-    st.sidebar.markdown("# Run Query")
+    #st.sidebar.markdown("# Run Query")
 
 page_names_to_funcs = {
+    "Run Query": run_query,
     "Create Database": create_database,
     "Upload Data": upload_data,
-    "Run Query": run_query,
+    
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
